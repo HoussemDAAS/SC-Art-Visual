@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { OrderSummary } from "@/components/checkout/OrderSummary";
 import { PaymentSelector } from "@/components/checkout/PaymentSelector";
-import { Shield, Lock, ArrowLeft } from "lucide-react";
+import { Lock, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { product } from "@/lib/data/product";
 import { PaymentMethod } from "@/lib/types";
@@ -41,9 +41,9 @@ export default function CheckoutPage() {
             <Alert className="bg-[#141414] border-[#262626]">
               <Lock className="w-4 h-4 text-white" strokeWidth={1.5} />
               <AlertDescription className="text-[#E5E5E5] text-center">
-                🔒 معلوماتك آمنة ومحمية. سيتم تفعيل حسابك فوراً بعد تأكيد الدفع.
+                🔒 معلوماتك آمنة ومحمية. راح تستلم المنتج فور تأكيد الدفع.
                 <br />
-                Your information is secure. Account activated immediately after payment confirmation.
+                Your information is secure. You will receive your product once the payment is verified.
               </AlertDescription>
             </Alert>
 
@@ -65,10 +65,6 @@ export default function CheckoutPage() {
 
               {/* Security Badges */}
               <div className="space-y-3 pt-4 border-t border-[#262626]">
-                <div className="flex items-center gap-3 text-sm text-[#D4D4D4]">
-                  <Shield className="w-4 h-4" strokeWidth={1.5} />
-                  <span>ضمان استرجاع المال لمدة 30 يوم</span>
-                </div>
                 <div className="flex items-center gap-3 text-sm text-[#D4D4D4]">
                   <Lock className="w-4 h-4" strokeWidth={1.5} />
                   <span>دفع آمن ومحمي 100%</span>

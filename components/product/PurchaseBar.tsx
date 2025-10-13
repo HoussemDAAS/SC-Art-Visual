@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Shield, Lock } from "lucide-react";
+import { Lock } from "lucide-react";
 import Link from "next/link";
 
 interface PurchaseBarProps {
@@ -40,10 +40,6 @@ export function PurchaseBar({ productName, price }: PurchaseBarProps) {
             </Link>
 
             <div className="space-y-3 pt-4 border-t border-[#262626]">
-              <div className="flex items-center gap-3 text-sm text-[#D4D4D4]">
-                <Shield className="w-4 h-4" strokeWidth={1.5} />
-                <span>ضمان استرجاع المال لمدة 30 يوم</span>
-              </div>
               <div className="flex items-center gap-3 text-sm text-[#D4D4D4]">
                 <Lock className="w-4 h-4" strokeWidth={1.5} />
                 <span>دفع آمن ومحمي 100%</span>
