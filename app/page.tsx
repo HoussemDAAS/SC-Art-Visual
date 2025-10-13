@@ -17,14 +17,14 @@ export default function HomePage() {
               variant="outline"
               className="border-[#404040] text-[#E5E5E5] px-4 py-1.5 tracking-wider"
             >
-              LIMITED TIME OFFER
+              عرض محدود ⏳ أسرع قبل ما يوفّى الفرصة
             </Badge>
 
             <h1 className="text-gradient">
               {product.name}
             </h1>
 
-            <p className="text-lg md:text-xl text-[#E5E5E5] leading-relaxed max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-[#E5E5E5] leading-relaxed max-w-2xl mx-auto whitespace-pre-line" dir="rtl">
               {product.tagline}
             </p>
 
