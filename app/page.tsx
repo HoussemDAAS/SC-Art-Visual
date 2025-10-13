@@ -61,7 +61,6 @@ export default function HomePage() {
               {/* Gallery */}
               <div className="fade-in">
                 <ProductGallery
-                  hero={product.images.hero}
                   previews={product.images.previews}
                   productName={product.name}
                 />

@@ -8,15 +8,15 @@ export const product: Product = {
   description:
     "تعبت من المونتاج وتضيّع وقت برشا؟ عملنا باك فيه 1500 موشن غرافيك جاهز للاستعمال - تحطّهم في الفيديو متاعك بثانية وتخرّج محتوى محترف يضرب في العين. مناسب للرييلز، التيك توك، واليوتيوب شورتس.",
   images: {
-    hero: "/images/product/image1.jpg",
+    hero: "/images/product/image2.jpg",
     previews: [
-      "/images/product/image1.jpg",
       "/images/product/image2.jpg",
+      "/images/product/image1.jpg",
       "/images/product/image3.jpg",
     ],
     thumbnails: [
-      "/images/product/image1.jpg",
       "/images/product/image2.jpg",
+      "/images/product/image1.jpg",
       "/images/product/image3.jpg",
     ],
   },

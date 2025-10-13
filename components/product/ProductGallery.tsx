@@ -6,34 +6,32 @@ import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 interface ProductGalleryProps {
-  hero: string;
   previews: string[];
   productName: string;
 }
 
 export function ProductGallery({
-  hero,
   previews,
   productName,
 }: ProductGalleryProps) {
   const [selectedImage, setSelectedImage] = useState(0);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
-  const allImages = [hero, ...previews];
+  const allImages = previews;
 
   return (
     <div className="space-y-4 md:space-y-6">
       {/* Main Image - Larger on mobile */}
       <div
         className="relative w-full overflow-hidden rounded-lg border border-[#262626] cursor-pointer group bg-[#0A0A0A]"
-        style={{ aspectRatio: '4/3' }}
+        style={{ aspectRatio: '1/1' }}
         onClick={() => setIsLightboxOpen(true)}
       >
         <Image
           src={allImages[selectedImage]}
           alt={`${productName} - Preview ${selectedImage + 1}`}
           fill
-          className="object-contain transition-transform duration-500 group-hover:scale-105 p-2 md:p-4"
+          className="object-contain transition-transform duration-500 group-hover:scale-105 p-1 md:p-4"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
           priority={selectedImage === 0}
         />
@@ -51,7 +49,7 @@ export function ProductGallery({
           <button
             key={index}
             onClick={() => setSelectedImage(index)}
-            className={`relative flex-shrink-0 w-24 h-24 md:w-28 md:h-28 rounded-md overflow-hidden border-2 transition-all duration-300 bg-[#0A0A0A] ${
+            className={`relative flex-shrink-0 w-28 h-28 md:w-32 md:h-32 rounded-md overflow-hidden border-2 transition-all duration-300 bg-[#0A0A0A] ${
               selectedImage === index
                 ? "border-white scale-105"
                 : "border-[#262626] hover:border-[#404040] opacity-70 hover:opacity-100"
@@ -61,8 +59,8 @@ export function ProductGallery({
               src={image}
               alt={`${productName} - Thumbnail ${index + 1}`}
               fill
-              className="object-contain p-1"
-              sizes="112px"
+              className="object-contain p-0.5"
+              sizes="128px"
             />
           </button>
         ))}
