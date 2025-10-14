@@ -3,7 +3,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Lock } from "lucide-react";
-import Link from "next/link";
 
 interface PurchaseBarProps {
   productName: string;
@@ -11,6 +10,12 @@ interface PurchaseBarProps {
 }
 
 export function PurchaseBar({ productName, price }: PurchaseBarProps) {
+  const handlePurchaseClick = () => {
+    const message = `مرحبا، نحب نشري ${productName} بـ ${price} دينار`;
+    const whatsappUrl = `https://wa.me/21652488485?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <>
       {/* Desktop Version - Sticky Card */}
@@ -30,14 +35,13 @@ export function PurchaseBar({ productName, price }: PurchaseBarProps) {
               <p className="text-xs text-[#D4D4D4] mt-1">تخفيض 56% - لفترة محدودة / 56% OFF - Limited Time</p>
             </div>
 
-            <Link href="/checkout" className="block">
-              <Button
-                size="lg"
-                className="w-full bg-[#22C55E] text-white hover:bg-[#16A34A] font-medium tracking-wide h-12 transition-all duration-300"
-              >
-                اشري
-              </Button>
-            </Link>
+            <Button
+              size="lg"
+              onClick={handlePurchaseClick}
+              className="w-full bg-[#22C55E] text-white hover:bg-[#16A34A] font-medium tracking-wide h-12 transition-all duration-300"
+            >
+              اشري
+            </Button>
 
             <div className="space-y-3 pt-4 border-t border-[#262626]">
               <div className="flex items-center gap-3 text-sm text-[#D4D4D4]">
@@ -61,14 +65,13 @@ export function PurchaseBar({ productName, price }: PurchaseBarProps) {
               <span className="text-xs text-[#A3A3A3] line-through">50 TND</span>
             </div>
           </div>
-          <Link href="/checkout" className="flex-1 max-w-[200px]">
-            <Button
-              size="lg"
-              className="w-full bg-[#22C55E] text-white hover:bg-[#16A34A] font-medium tracking-wide h-12"
-            >
-              اشري
-            </Button>
-          </Link>
+          <Button
+            size="lg"
+            onClick={handlePurchaseClick}
+            className="flex-1 max-w-[200px] bg-[#22C55E] text-white hover:bg-[#16A34A] font-medium tracking-wide h-12"
+          >
+            اشري
+          </Button>
         </div>
       </div>
     </>
