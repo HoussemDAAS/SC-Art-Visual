@@ -33,9 +33,9 @@ export function PurchaseBar({ productName, price }: PurchaseBarProps) {
             <Link href="/checkout" className="block">
               <Button
                 size="lg"
-                className="w-full bg-white text-black hover:bg-[#E5E5E5] font-medium tracking-wide h-12 transition-all duration-300"
+                className="w-full bg-[#22C55E] text-white hover:bg-[#16A34A] font-medium tracking-wide h-12 transition-all duration-300"
               >
-                Purchase Now
+                اشري
               </Button>
             </Link>
 
@@ -64,9 +64,9 @@ export function PurchaseBar({ productName, price }: PurchaseBarProps) {
           <Link href="/checkout" className="flex-1 max-w-[200px]">
             <Button
               size="lg"
-              className="w-full bg-white text-black hover:bg-[#E5E5E5] font-medium tracking-wide h-12"
+              className="w-full bg-[#22C55E] text-white hover:bg-[#16A34A] font-medium tracking-wide h-12"
             >
-              Purchase
+              اشري
             </Button>
           </Link>
         </div>
